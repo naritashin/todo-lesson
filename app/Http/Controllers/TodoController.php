@@ -49,4 +49,12 @@ class TodoController extends Controller// TodoControllerクラスにController�
 
     return redirect()->to('todo');//todoにredirect
   }
+
+  public function destroy($id)
+  {
+    $data = $this->todo->find($id);// id=$idのレコード取得, $dataに格納
+    $data->delete();// 取得したレコードを削除
+
+    return redirect()->to('todo');
+  }
 }
