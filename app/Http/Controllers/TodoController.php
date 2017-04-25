@@ -45,6 +45,8 @@ class TodoController extends Controller// TodoControllerクラスにController�
   public function update(Request $request, $id)
   {
     $input = $request->all();// Request内容を全取得, $inputに格納
-    $this->todo->where('id', $id)->update(['title' => $input['title']]);// id=$idのレコードのtitleをrequestで取得したtitleに更新
+    $this->todo->where('id', $id)->update(['title' => $input['title']]);// idカラム=$idのレコードのtitleをrequestで取得したtitleに更新
+
+    return redirect()->to('todo');//todoにredirect
   }
 }
