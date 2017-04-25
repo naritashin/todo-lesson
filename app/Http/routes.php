@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('todo', 'TodoController');
+Route::resource('todo', 'TodoController');// index, create, storeなどの基本的なメソッドに自動でroutingする
