@@ -35,4 +35,16 @@ class TodoController extends Controller// TodoControllerクラスにController�
 
     return redirect()->to('todo');// todoにredirect
   }
+
+  public function edit($id)
+  {
+    $todo = $this->todo->find($id);// id=$idのレコードを取得
+    return view('todo.edit')->with(compact('todo'));// edit.blade.phpを表示, 取得レコードを渡す
+  }
+
+  public function update(Request $request, $id)
+  {
+    $input = $request->all();// Request内容を全取得, $inputに格納
+    $this->todo->where('id', $id)->update(['title' => $input['title']]);// id=$idのレコードのtitleをrequestで取得したtitleに更新
+  }
 }
