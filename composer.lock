@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "content-hash": "0feb6af5bef0e094e776fba476c27e7c",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -436,17 +436,71 @@
             "time": "2016-08-26T11:44:52+00:00"
         },
         {
-            "name": "league/flysystem",
-            "version": "1.0.37",
+            "name": "laravelcollective/html",
+            "version": "v5.2.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "78b5cc4feb61a882302df4fbaf63b7662e5e4ccd"
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "8956f004753d7b1bc793076f6adfb678e31d1250"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/78b5cc4feb61a882302df4fbaf63b7662e5e4ccd",
-                "reference": "78b5cc4feb61a882302df4fbaf63b7662e5e4ccd",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/8956f004753d7b1bc793076f6adfb678e31d1250",
+                "reference": "8956f004753d7b1bc793076f6adfb678e31d1250",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.2.*",
+                "illuminate/routing": "5.2.*",
+                "illuminate/session": "5.2.*",
+                "illuminate/support": "5.2.*",
+                "illuminate/view": "5.2.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "illuminate/database": "5.2.*",
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "http://laravelcollective.com",
+            "time": "2016-12-13T14:28:46+00:00"
+        },
+        {
+            "name": "league/flysystem",
+            "version": "1.0.38",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "4ba6e13f5116204b21c3afdf400ecf2b9eb1c482"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4ba6e13f5116204b21c3afdf400ecf2b9eb1c482",
+                "reference": "4ba6e13f5116204b21c3afdf400ecf2b9eb1c482",
                 "shasum": ""
             },
             "require": {
@@ -468,12 +522,12 @@
                 "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
                 "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
                 "league/flysystem-copy": "Allows you to use Copy.com storage",
-                "league/flysystem-dropbox": "Allows you to use Dropbox storage",
                 "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
                 "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
                 "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
                 "league/flysystem-webdav": "Allows you to use WebDAV storage",
-                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter"
+                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
+                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage"
             },
             "type": "library",
             "extra": {
@@ -516,7 +570,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-03-22T15:43:14+00:00"
+            "time": "2017-04-22T18:59:19+00:00"
         },
         {
             "name": "monolog/monolog",
