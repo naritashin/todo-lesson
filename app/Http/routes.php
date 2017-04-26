@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
-Route::resource('todo', 'TodoController');// index, create, storeなどの基本的なメソッドに自動でroutingする
+Route::auth();// AuthControllerクラスへのroutingを定義
+
+Route::resource('todo', 'TodoController');// index, create, storeなど良く使われるメソッドへのroutingを定義

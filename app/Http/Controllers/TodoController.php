@@ -13,12 +13,13 @@ class TodoController extends Controller// TodoControllerクラスにController�
 
   public function __construct(Todo $todo)
   {
+    $this->middleware('auth');// ログインしているかどうか判定
     $this->todo = $todo;// Todoモデルのメソッドを$todoに格納
   }
 
   public function index()
   {
-    $todos = $this->todo->all();// 全レコードの取得, all()はModelクラスにある
+    $todos = $this->todo->all();// 全レコードの取得
     return view('todo.index', compact('todos'));// index.blade.phpを表示させる, 取得したレコードを渡す
   }
 
